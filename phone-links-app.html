@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Links</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f5f5dc">
+</head>
+<body>
+    <div class="container">
+        <h1>Introduza o número para gerar links e pesquisa</h1>
+        
+        <div class="input-group">
+            <select id="countryCode" class="input-field">
+                <option value="">Selecione o país</option>
+                <option value="+351">Portugal (+351)</option>
+                <option value="+55">Brasil (+55)</option>
+                <option value="+1">EUA/Canadá (+1)</option>
+                <!-- Adicione mais países conforme necessário -->
+            </select>
+            
+            <input type="tel" id="phoneNumber" class="input-field" 
+                   placeholder="Número de telefone">
+            
+            <button onclick="generateLinks()" class="submit-btn">Gerar Links</button>
+        </div>
+
+        <div class="results">
+            <div class="column">
+                <h2>Mensagem Direta</h2>
+                <div id="directLinks"></div>
+            </div>
+            <div class="column">
+                <h2>Pesquisar</h2>
+                <div id="searchLinks"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
